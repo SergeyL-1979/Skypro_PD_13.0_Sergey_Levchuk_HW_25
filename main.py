@@ -34,8 +34,8 @@ application.config['JSON_AS_ASCII'] = False
 # application.config['SERVER_NAME'] = '127.0.0.1:25000'
 application.config['SECRET_KEY'] = '249y823r9v8238r9u'
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./data/movies.db'
-# application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://flask_app:flask@localhost:5432/flask_app"
+# application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///./data/movies.db'
+application.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://flask_app:flask@192.168.1.102/flask_app"
 application.config['POSTS_PER_PAGE'] = 12  # пагинация, вывод данных на страницу
 application.config['MAX_PAGE'] = 100  # максимальное количество страниц
 # application.config.from_object(config)
@@ -46,9 +46,9 @@ application.app_context().push()
 
 
 db = SQLAlchemy()
-migrate = Migrate(db)
+migrate = Migrate(application, db)
 
-# def configure_app(application: Flask):
+# def configure_app(application: Flas:
 db.init_app(application)
 api = Api(
     app=application,
