@@ -1,0 +1,22 @@
+POST http://localhost:10101/users/
+Content-Type: application/json
+
+{
+    "name": "usersd_name",
+    "email": "emaiel@example.com",
+    "password": "1ee41526",
+    "surname": "user_last",
+    "favorite_genre_id": 4
+}
+
+###
+
+GET http://localhost:10101/users/
+Accept:application/json
+
+###
+
+DELETE http://localhost:10101/users/1
+Accept: application/json
+
+###

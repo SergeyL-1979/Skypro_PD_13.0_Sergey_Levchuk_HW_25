@@ -1,0 +1,64 @@
+POST http://localhost:10101/movies/
+Content-Type: application/json
+
+{
+  "title": "title",
+  "description": "description",
+  "trailer": "trailer",
+  "year": 1222,
+  "rating": 1,
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+GET http://localhost:10101/movies/
+Accept: application/json
+
+###
+
+GET http://localhost:10101/movies/?director_id=2
+Accept: application/json
+
+###
+
+GET http://localhost:10101/movies/?director_id=2&genre_id=4
+Accept: application/json
+
+###
+
+GET http://localhost:10101/movies/1
+Accept: application/json
+
+###
+
+PUT http://localhost:10101/movies/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "GOVNO",
+  "description": "description",
+  "trailer": "trailer",
+  "year": 1222,
+  "rating": 1,
+  "genre_id": 1,
+  "director_id": 1
+}
+###
+
+DELETE http://localhost:10101/movies/22
+Accept: application/json
+
+###
+
+PATCH http://localhost:10101/movies/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "STRASHNO"
+}
+
+###
