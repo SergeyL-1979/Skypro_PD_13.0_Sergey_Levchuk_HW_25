@@ -19,7 +19,7 @@ class Config(object):
     SERVER_NAME = '127.0.0.1:25000'
     SECRET_KEY = '249y823r9v8238r9u'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    # SQLALCHEMY_DATABASE_URI = 'sqlite:///./data/movies.db'
+    # SQLALCHEMY_DATABASE_URI = 'sqlite:///../data/movies.db'
     SQLALCHEMY_DATABASE_URI = "postgresql://flask_app:flask@localhost/flask_pg"
     POSTS_PER_PAGE = 12  # пагинация, вывод данных на страницу
     MAX_PAGE = 100  # максимальное количество страниц
